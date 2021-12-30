@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 1140px;
+            margin: 0 auto;
+        }
+        .opener{
+            display: flex;
+            width: 400px;
+            height: 40px;
+            border: 3px solid black;
+            align-items: center;
+            justify-content: center;
+            font-size: 35px;
+            margin-top: 5px;
+        }
+        .opener.active{
+            background-color: lightpink;
+        }
+        .content{
+            display: none;
+            border: 3px solid mediumorchid;
+            background-color: mediumorchid;
+            width: 400px;
+            height: 150px;
+            text-align: center;
+        }
+        .opener + div {
+            display: none;
+        }
+        .opener.active + div {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        Accordeon
+    </h1>
+    <div class="acc-wrapper container">
+        <div class="first">
+            <div class="opener" data-opener="0">
+                1
+            </div>
+            <div class="content" data-contant="1">
+                Some text
+            </div>
+        </div>
+        <div class="second">
+            <div class="opener" data-opener="1">
+                2
+            </div>
+            <div class="content" data-contant="2">
+                some Text
+            </div>
+        </div>
+        <div class="third">
+            <div class="opener" data-opener="2">
+                3
+            </div>
+            <div class="content" data-contant="3">
+                some Text
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>

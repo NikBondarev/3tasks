@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 1140px;
+            margin: 0 auto;
+        }
+        .top{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+        .middle{
+            margin: 20px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .bottom{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+        .cube{
+            width: 250px;
+            height: 250px;
+            background-color: aqua;
+        }
+        .border-radius{
+            display: none;
+        }
+        .border-radius.active{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        CCS Generator
+    </h1>
+    <section class="container">
+        <div class="gen-wrapper">
+            <div class="top">
+                <div class="top-left">
+                    <input type="range" id="Lt" min="0" max="100" value="0" class="input">
+                    <div class="tl-result" id="result-tl">
+                        0
+                    </div>
+                </div>
+                <div class="top-right">
+                    <input type="range" id="Rt" min="0" max="100" value="0" class="input">
+                    <div class="tr-result" id="result-tr">
+                        0
+                    </div> 
+                </div>
+            </div>
+            <div class="middle">
+                <div class="cube" id="cube">
+
+                </div>
+            </div>
+            <div class="bottom">
+                <div class="bot-right">
+                    <input type="range" id="Rb" min="0" max="100" value="0" class="input">
+                    <div class="br-result" id="result-br">
+                        0
+                    </div> 
+                </div>
+                <div class="bot-left">
+                    <input type="range" id="Lb" min="0" max="100" value="0" class="input">
+                    <div class="bl-result" id="result-bl">
+                        0
+                    </div>
+                </div>
+            </div>
+            <button id="btn">GIVE STYLE</button>
+            <div class="border-radius" id="border">
+                <p>Top-left: <span id="top-left-result">0</span></p>
+                <p>Top-right: <span id="top-right-result">0</span></p>
+                <p>Bottom-left: <span id="bottom-left-result">0</span></p>
+                <p>Bottom-rigth: <span id="bottom-right-result">0</span></p>
+            </div>
+        </div>
+    </section>
+    <script src="main.js"></script>
+</body>
+</html>
